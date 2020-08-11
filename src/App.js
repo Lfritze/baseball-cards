@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
+import data from "./data"
 import './App.css';
 
 function App() {
@@ -41,82 +41,29 @@ function App() {
       <main className="main">
         <div className="content">
           <ul className="products">
-            <li> 
+            {
+              data.products.map(product =>
+                <li> 
               <div className="product">
-                <img className="product-image" src="/images/Reggie_Jackson.JPG" alt="product" />
+                <img className="product-image" src={product.image} alt="product" />
                 <div className="product-name"> 
                   <a href="product.html">
-                    Topps
+                    {product.name}
                   </a>
                 </div>
                 <div className="product-brand">
-                  1984 Topps
+                  {product.brand}
                 </div>
                 <div className="product-price">
-                  $5
+                  ${product.price}
                 </div>
                 <div className="product-rating">
-                  $4.5 Stars (10 Reviews)
+                  {product.rating} Stars ({product.numReviews})
                 </div>
               </div>  
-            </li>
-            <li> 
-              <div className="product">
-                <img className="product-image" src="/images/Reggie_Jackson.JPG" alt="product" />
-                <div className="product-name"> 
-                  <a href="product.html">
-                    Topps
-                  </a>
-                </div>
-                <div className="product-brand">
-                  1984 Topps
-                </div>
-                <div className="product-price">
-                  $5
-                </div>
-                <div className="product-rating">
-                  $4.5 Stars (10 Reviews)
-                </div>
-              </div>  
-            </li>
-            <li> 
-              <div className="product">
-                <img className="product-image" src="/images/Reggie_Jackson.JPG" alt="product" />
-                <div className="product-name"> 
-                  <a href="product.html">
-                    Topps
-                  </a>
-                </div>
-                <div className="product-brand">
-                  1984 Topps
-                </div>
-                <div className="product-price">
-                  $5
-                </div>
-                <div className="product-rating">
-                  $4.5 Stars (10 Reviews)
-                </div>
-              </div>  
-            </li>
-            <li> 
-              <div className="product">
-                <img className="product-image" src="/images/Reggie_Jackson.JPG" alt="product" />
-                <div className="product-name"> 
-                  <a href="product.html">
-                    Topps 
-                  </a>
-                </div>
-                <div className="product-brand">
-                  1984 Topps
-                </div>
-                <div className="product-price">
-                  $5
-                </div>
-                <div className="product-rating">
-                  $4.5 Stars (10 Reviews)
-                </div>
-              </div>  
-            </li>
+            </li> )
+            }
+            
           </ul>
         </div>
       </main>
