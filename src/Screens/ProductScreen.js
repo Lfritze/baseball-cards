@@ -10,7 +10,7 @@ function ProductScreen(props) {
       <div>
         <Link to="/">Back to result</Link>
       </div>
-      <div className="details"></div>
+      <div className="details">
         <div className="details-image">
           <img src={product.image} alt="product" />
         </div>
@@ -55,6 +55,7 @@ function ProductScreen(props) {
         </ul>
       </div>
     </div>
+  </div>
   )
 }
 
